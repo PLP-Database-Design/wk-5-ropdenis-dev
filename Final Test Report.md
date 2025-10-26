@@ -11,9 +11,9 @@
 
 | Role | Name | Responsibilities |
 |------|------|------------------|
-| Test Manager | | Planning, scheduling, coordination, metric tracking |
-| Risk Analyst | | Risk identification, prioritization, test design linkage |
-| Test Executor | | Execution, evidence capture, defect logging |
+| Test Manager | Brian Mbaka| Planning, scheduling, coordination, metric tracking |
+| Risk Analyst |Denis kiptum | Risk identification, prioritization, test design linkage |
+| Test Executor |Wilson  | Execution, evidence capture, defect logging |
 
 ## Group Rules
 
@@ -31,9 +31,9 @@
 
 | Feature | Description | Risk Category |
 |---------|-------------|---------------|
-| Reset Game | Clears score and progress instantly | |
-| Leaderboard | Stores top 3 scores in localStorage | |
-| Bonus Round | Every 3 puzzles → doubles score | |
+| Reset Game | Clears score and progress instantly |Functional |
+| Leaderboard | Stores top 3 scores in localStorage |Data Integrity|
+| Bonus Round | Every 3 puzzles → doubles score |Logic |
 
 ## Test Plan
 
@@ -79,7 +79,7 @@
 |R-02 | Bonus |Bonus score miscalculation | 2| 3| High| Create risk‑based tests around sequences (e.g., solve 3 puzzles with/without hints) to confirm exact doubling semantics; add unit tests for scoring function.|
 |R-03 |Hint system |Hint award mismatch — incorrect deduction or wrong reduced score applied|2 | 3| High| Add tests covering hint flow: check immediate deduction, final award value, and interactions with bonus rounds.|
 |R-04 |Reset Function |Bonus counter not resetting after Reset Game | 1 | 2 |Low| Verify Reset to clear the 'Solved' count and Bonus at counter; add test asserting Bonus at: 3 after reset.|
-|R-05 |Leadrerboard | Incorrect sorting or tie handling in leaderboard display| 1| 2 |Boundary tests for leaderboard with large integers and ties; ensure numeric sort, stable tie-break (timestamp). |
+|R-05 |Leadrerboard | Incorrect sorting or tie handling in leaderboard display| 1| 2 | medium |Boundary tests for leaderboard with large integers and ties; ensure numeric sort, stable tie-break (timestamp). |
 |R-06 |User Interface |LocalStorage corruption causing missing or broken leaderboard| 1 | 3 |Low | Read-with-validate: wrap localStorage reads in try/catch, validate data structure and types before rendering includes tests that inject malformed entries.|
 
 ### Risk Coverage

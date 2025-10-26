@@ -149,17 +149,30 @@ Needs Fix
 
 | Phase | Deliverable | Actual Output | Variance | Owner |
 |-------|-------------|---------------|----------|-------|
-| | | | | |
+|Planning & Risk Identification|Test Plan & Risk Analysis | Completed test plan and 6 risks identified| none| Test Manager & Risk Analyst|
+|Test Case Design & Environment Setup| Test Case Design & Environment Setup|8 test cases prepared; environment :Chrome, localStorage ready |none | Test Executor & Risk Analyst|
+|Test Execution & Defect Logging |Execute Test Cases & Log Defects |4 defects executed (D-01, D-02,Closed D-03 and D-04)|Minor delay for hint usability verification | Test Executor|
+|Regression, metrics & report submission| Metrics tables, Risk Coverage, Reflection|Completed metrics & report draft |Minor adjustments needed for TC-03 usability addition | Test Manager & Risk Analyst|
 
 **Progress Tracking Method:**  
+- Daily check-ins on GitHub Issues.
+- Test case execution tracked in the Test Cases table (Pass/Fail).
+- Metrics updated after each test cycle (Defect Density, Risk Coverage, Pass Rate).
+
 **Change Control Notes:**
+- Risk R-03 updated to include Hint button usability issues.
+- TC-03 added to cover Hint button usability defect.
+- D-03 removed as actual behavior matched expected.
 
 ## Lessons Learned
 
-- Most Defect Prone Feature: 
-- Risk Analysis Impact: 
-- Team Communication Effectiveness: 
+- Most Defect Prone Feature: Hint System (multiple issues with deduction timing and button usability).
+- Risk Analysis Impact: Risk-based testing helped prioritize Hint and Bonus flows first, preventing major scoring errors.
+- Team Communication Effectiveness: Daily GitHub updates and Slack messages improved coordination; minor delays occurred due to clarifying bonus rules.
 - Improvements for Next Cycle: 
+. Include usability test scenarios earlier.
+. Automate leaderboard persistence and bonus calculations verification.
+. Improve clarity of scoring rules in test documentation.
 
 ## Attachments
 
@@ -169,12 +182,13 @@ Needs Fix
 
 | Name | Role | Initials | Date |
 |------|------|-----------|------|
-| | Test Manager | | |
-| | Risk Analyst | | |
-| | Test Executor | | |
+|Brian Mbaka | Test Manager |Bm |26 Oct 2025 |
+|Denis KIptum | Risk Analyst |DK |26 Oct 2025 |
+|Wilson | Test Executor |W |26 Oct 2025 |
 
 ## Overall Summary
 
 **Statement:** 
+All planned tests for Word Puzzle Game Plus have been executed, defects were logged with linked risks, and key features like Bonus, Hint, and Leaderboard were fully verified.
 
-**Test Status:** ☐ Completed / ☐ In Progress / ☐ Deferred
+**Test Status:** ☑ Completed / ☐ In Progress / ☐ Deferred

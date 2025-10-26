@@ -126,22 +126,22 @@ Needs Fix
 
 | ID | Issue Title | Severity | Risk ID | Status | GitHub Link |
 |----|-------------|----------|---------|--------|-------------|
-|D-01 |Hint button active before New Puzzle| Medium | R-03| Open |https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/3|
+|D-01 |Hint button active before New Puzzle| High | R-03| Open |https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/3|
 |D-02 | Hint deduction not reflected immediately|medium |R-03 |Open | https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/4|
 |D-03 | Bonus not doubling consistently on 3rd correct answer|Medium |R-02| Closed – Expected Behavior| https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/5|
-
+|D-04 | Leaderboard  persistance of the top-3 after closing tab| Low | R-01|closed-Works as Expected |https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/6|
 ## Metrics
 
 - Test Case Pass Percent: (7/8) × 100 = 88%
-- Defect Density: (3/8) × 100 = 0.38
+- Defect Density: (4/8) × 100 = 0.50
 - Risk Coverage Percent: (5/6) × 100 = 83%
-- Regression Success Rate: (3/3) × 100 = 100%
+- Regression Success Rate: (4/4) × 100 = 100%
 
 ### Defect Summary
 
-- Total Defects Logged:3 
-- Critical High: 1 (D-01)
-- Fix Rate: (3/3) × 100 = 100%
+- Total Defects Logged:4
+- Critical High : 1 (D-01)
+- Fix Rate: (4/4) × 100 = 100%
 
 ## Test Control & Project Management
 

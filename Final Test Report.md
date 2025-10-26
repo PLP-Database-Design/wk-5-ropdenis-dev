@@ -39,38 +39,59 @@
 
 ### Objectives
 
-- 
+- Verify correctness and stability of new features: Reset Game, Leaderboard (top‑3 persistence), Bonus Round (every 3 puzzles → score ×2).
+
+- Ensure data integrity across sessions (localStorage) and correct score calculation.
+
+- Identify high‑risk defects early and maintain traceability via GitHub Issues.
 
 ### Scope
 
 **In Scope:**
-- 
+- Functional testing of gameplay that is : guess, hint, bonus, reset, leaderboard.
+- Risk-based validation for scoring, bonus, and persistence logic.
+- UI usability for clarity of bonus and hint feedback.
 
 **Out of Scope:**
-- 
+- Mobile layout testing beyond basic responsiveness.
+- Server-level load testing.
 
 ### Tools & Resources
 
-- 
+- People: Test Manager, Risk Analyst, Test Executor
+- Tools: Chrome , Chrome DevTools GitHub (Issues + Project board), a screen capture tool, Google Sheets for metrics.
 
 ### Schedule
 
 | Phase | Planned Duration | Actual Duration | Status |
 |-------|------------------|-----------------|--------|
-| | | | |
-
+| Planning & Risk Identification| 1 Day|1 Day |Completed|
+| Test Case Design & Environment Setup| 2 Days | 1 Day|Completed |
+| Test Execution & Defect Logging|2 Days | - | in progress|
+| Regression, metrics & report submission|2 Days | - | pending |
 ## Risk Analysis
 
 ### Risks
 
 | ID | Feature | Risk Description | Likelihood | Impact | Priority | Mitigation Strategy |
 |----|---------|------------------|------------|--------|----------|---------------------|
-| | | | | | | |
+|R-01 | Leaderboard| Leaderboard fails to persist after refresh or browser close| 1| 3| High| Use localStorage for persistence; add automated test to verify leaderboard remains intact after refresh or reopen.|
+|R-02 | Bonus |Bonus score miscalculation | 2| 3| High| Create risk‑based tests around sequences (e.g., solve 3 puzzles with/without hints) to confirm exact doubling semantics; add unit tests for scoring function.|
+|R-03 |Hint system |Hint award mismatch — incorrect deduction or wrong reduced score applied|2 | 3| High| Add tests covering hint flow: check immediate deduction, final award value, and interactions with bonus rounds.|
+|R-04 |Reset Function |Bonus counter not resetting after Reset Game | 1 | 2 |Low| Verify Reset to clear the 'Solved' count and Bonus at counter; add test asserting Bonus at: 3 after reset.|
+|R-05 |Leadrerboard | Incorrect sorting or tie handling in leaderboard display| 1| 2 |Boundary tests for leaderboard with large integers and ties; ensure numeric sort, stable tie-break (timestamp). |
+|R-06 |User Interface |LocalStorage corruption causing missing or broken leaderboard| 1 | 3 |Low | Read-with-validate: wrap localStorage reads in try/catch, validate data structure and types before rendering includes tests that inject malformed entries.|
 
 ### Risk Coverage
 
-- Tested Risks Percent: 
-- Untested Risks Percent: 
+- Tested Risks Percent:(5 / 6) × 100 = 83%
+- Untested Risks Percent:(1 / 6) × 100 = 17%
+   Risk Coverage Pie Chart
+
+Closed / Validated      ████████░░░░░░░░░░░░░░░░░░ 33%
+Monitored (Low Impact)  █████████████████░░░░░░░░░ 50%
+Open / Needs Fix        ██████░░░░░░░░░░░░░░░░░░░ 17%
+
 
 ## Test Cases
 

@@ -118,7 +118,7 @@ Needs Fix
 |TC-03 |Hint system |Verify hint deduction, reduced award and correct behavior when no puzzle is active.|Hint button remains inactive or triggers “Please start a New puzzle” message before a word is displayed|Hint button displays hint meaning with no puzzle shown (confusing)|Fail|R-03 |
 |TC-04 |Reset Function | Verify Reset clears score and “Bonus at” counter|“Score: 0”, “Solved: 0”, “Bonus at: 3” displayed after reset |works correctly |passed |R-04 |
 |TC-05 |Negative Test — Leaderboard Sorting|Validate sorting order and tie handling |Scores displayed in descending order; ties stable | Works correctly | Passed|R-05|
-|TC-06 | LocalStorage Corruption| Test how system handles malformed leaderboard data|On load, the system detects invalid data, clears leaderboard, and continues without crashing| System cleared invalid leaderboard entries and continued normally |Passes | R-06|
+|TC-06 | LocalStorage Corruption| Test how system handles malformed leaderboard data|On load, the system detects invalid data, clears leaderboard, and continues without crashing|works as Expected |Passes | R-06|
 |TC-07 |Usability Test - UI Responsiveness |Ensure layout adapts properly to small screen sizes |UI scales without breaking |Works as expected | passed| - |
 |TC-08 |Negative Test — Invalid Input handling |Enter blank or special characters as guess | Display validation message and do not advance puzzle or award points| works correctly| passed| - |
 

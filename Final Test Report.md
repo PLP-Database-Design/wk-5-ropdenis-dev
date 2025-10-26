@@ -113,26 +113,35 @@ Needs Fix
 
 | ID | Feature | Objective | Expected Result | Actual Result | Status | Risk Link |
 |----|---------|-----------|----------------|---------------|--------|-----------|
-| | | | | | | |
+|TC-01 | Leaderboard Persistence|Verify leaderboard remains intact after page refresh or browser reopen | Top 3 scores persist correctly| Works as expected| Passed| R-01|
+|TC-02 |Bonus Logic |Confirm bonus (×2) applies after every 3 solved puzzles | Score doubles exactly at 3rd puzzle solved| Works correctly|passed |R-02 |
+|TC-03 |Hint system | Check hint deducts 2 points and reduced reward applies|Score immediately -2 on hint use, final award +5 | Works as expected| passed|R-03 |
+|TC-04 |Reset Function | Verify Reset clears score and “Bonus at” counter|“Score: 0”, “Solved: 0”, “Bonus at: 3” displayed after reset |works correctly |passed |R-04 |
+|TC-05 |Negative Test — Leaderboard Sorting|Validate sorting order and tie handling |Scores displayed in descending order; ties stable | Works correctly | Passed|R-05|
+|TC-06 | LocalStorage Corruption| Test how system handles malformed leaderboard data|On load, the system detects invalid data, clears leaderboard, and continues without crashing| Not executed — requires manual injection of corrupted localStorage entries |Skipped | R-06|
+|TC-07 |Usability Test - UI Responsiveness |Ensure layout adapts properly to small screen sizes |UI scales without breaking |Works as expected | passed| - |
+|TC-08 |Negative Test — Invalid Input handling |Enter blank or special characters as guess | Display validation message and do not advance puzzle or award points| works correctly| passed| - |
 
 ## Defects
 
 | ID | Issue Title | Severity | Risk ID | Status | GitHub Link |
 |----|-------------|----------|---------|--------|-------------|
-| | | | | | |
+|D-01 |Bonus applied twice when using hint during bonus round | High | R-02| Fixed| |
+|D-02 | Hint deduction not reflected immediately|medium |R-03 |Fixed | |
+|D-03 |Leaderboard fails numeric sorting for tied scores |Medium |R-05 | Fixed| |
 
 ## Metrics
 
-- Test Case Pass Percent: 
-- Defect Density: 
-- Risk Coverage Percent: 
-- Regression Success Rate: 
+- Test Case Pass Percent: (7/8) × 100 = 88%
+- Defect Density: (3/8) × 100 = 0.38
+- Risk Coverage Percent: (5/6) × 100 = 83%
+- Regression Success Rate: (3/3) × 100 = 100%
 
 ### Defect Summary
 
-- Total Defects Logged: 
-- Critical High: 
-- Fix Rate: 
+- Total Defects Logged:3 
+- Critical High: 1 (D-01)
+- Fix Rate: (3/3) × 100 = 100%
 
 ## Test Control & Project Management
 

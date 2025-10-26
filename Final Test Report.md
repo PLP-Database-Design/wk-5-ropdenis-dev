@@ -65,10 +65,10 @@
 
 | Phase | Planned Duration | Actual Duration | Status |
 |-------|------------------|-----------------|--------|
-| Planning & Risk Identification| 1 Day|1 Day |Completed|
+| Planning & Risk Identification| 3 Days |1 Day |Completed|
 | Test Case Design & Environment Setup| 2 Days | 1 Day|Completed |
-| Test Execution & Defect Logging|2 Days | - | in progress|
-| Regression, metrics & report submission|2 Days | - | pending |
+| Test Execution & Defect Logging|2 Days | 1 Day|Completed|
+| Regression, metrics & report submission|2 Days | 2 Days |Completed |
 ## Risk Analysis
 
 ### Risks

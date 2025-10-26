@@ -77,7 +77,7 @@
 |----|---------|------------------|------------|--------|----------|---------------------|
 |R-01 | Leaderboard| Leaderboard fails to persist after refresh or browser close| 1| 3| High| Use localStorage for persistence; add automated test to verify leaderboard remains intact after refresh or reopen.|
 |R-02 | Bonus |Bonus score miscalculation | 2| 3| High| Create risk‑based tests around sequences (e.g., solve 3 puzzles with/without hints) to confirm exact doubling semantics; add unit tests for scoring function.|
-|R-03 |Hint system |Hint award mismatch — incorrect deduction or wrong reduced score applied|2 | 3| High| Add tests covering hint flow: check immediate deduction, final award value, and interactions with bonus rounds.|
+|R-03 |Hint system |Hint logic mismatch — Hint button active before puzzle load (causing confusion)|2 | 3| High| Add tests covering hint flow: verify deduction, award value, and ensure Hint is disabled until puzzle is active.|
 |R-04 |Reset Function |Bonus counter not resetting after Reset Game | 1 | 2 |Low| Verify Reset to clear the 'Solved' count and Bonus at counter; add test asserting Bonus at: 3 after reset.|
 |R-05 |Leadrerboard | Incorrect sorting or tie handling in leaderboard display| 1| 2 | medium |Boundary tests for leaderboard with large integers and ties; ensure numeric sort, stable tie-break (timestamp). |
 |R-06 |User Interface |LocalStorage corruption causing missing or broken leaderboard| 1 | 3 |Low | Read-with-validate: wrap localStorage reads in try/catch, validate data structure and types before rendering includes tests that inject malformed entries.|
@@ -115,7 +115,7 @@ Needs Fix
 |----|---------|-----------|----------------|---------------|--------|-----------|
 |TC-01 | Leaderboard Persistence|Verify leaderboard remains intact after page refresh or browser reopen | Top 3 scores persist correctly| Works as expected| Passed| R-01|
 |TC-02 |Bonus Logic |Confirm bonus (×2) applies after every 3 solved puzzles | Score doubles exactly at 3rd puzzle solved| Works correctly|passed |R-02 |
-|TC-03 |Hint system | Check hint deducts 2 points and reduced reward applies|Score immediately -2 on hint use, final award +5 | Works as expected| passed|R-03 |
+|TC-03 |Hint system |Verify hint deduction, reduced award and correct behavior when no puzzle is active.|Hint button remains inactive or triggers “Please start a New puzzle” message before a word is displayed|Hint button displays hint meaning with no puzzle shown (confusing)|Fail|R-03 |
 |TC-04 |Reset Function | Verify Reset clears score and “Bonus at” counter|“Score: 0”, “Solved: 0”, “Bonus at: 3” displayed after reset |works correctly |passed |R-04 |
 |TC-05 |Negative Test — Leaderboard Sorting|Validate sorting order and tie handling |Scores displayed in descending order; ties stable | Works correctly | Passed|R-05|
 |TC-06 | LocalStorage Corruption| Test how system handles malformed leaderboard data|On load, the system detects invalid data, clears leaderboard, and continues without crashing| Not executed — requires manual injection of corrupted localStorage entries |Skipped | R-06|
@@ -126,9 +126,9 @@ Needs Fix
 
 | ID | Issue Title | Severity | Risk ID | Status | GitHub Link |
 |----|-------------|----------|---------|--------|-------------|
-|D-01 |Bonus applied twice when using hint during bonus round | High | R-02| Fixed| |
+|D-01 |Hint button active before New Puzzle| Medium | R-03| Open |https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/3|
 |D-02 | Hint deduction not reflected immediately|medium |R-03 |Fixed | |
-|D-03 |Leaderboard fails numeric sorting for tied scores |Medium |R-05 | Fixed| |
+|D-03 | |Medium |R-05 | Fixed| |
 
 ## Metrics
 

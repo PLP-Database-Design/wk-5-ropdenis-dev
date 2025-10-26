@@ -13,7 +13,7 @@
 |------|------|------------------|
 | Test Manager | Brian Mbaka| Planning, scheduling, coordination, metric tracking |
 | Risk Analyst |Denis kiptum | Risk identification, prioritization, test design linkage |
-| Test Executor |Wilson  | Execution, evidence capture, defect logging |
+| Test Executor |Wilson Ndinya | Execution, evidence capture, defect logging |
 
 ## Group Rules
 
@@ -185,9 +185,9 @@ Needs Fix
 
 | Name | Role | Initials | Date |
 |------|------|-----------|------|
-|Brian Mbaka | Test Manager |Bm |26 Oct 2025 |
+|Brian Mbaka | Test Manager |BM |26 Oct 2025 |
 |Denis KIptum | Risk Analyst |DK |26 Oct 2025 |
-|Wilson | Test Executor |W |26 Oct 2025 |
+|Wilson Ndinya| Test Executor |WN |26 Oct 2025 |
 
 ## Overall Summary
 

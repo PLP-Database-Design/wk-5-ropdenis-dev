@@ -86,17 +86,26 @@
 
 - Tested Risks Percent:
 (5 / 6) × 100 = 83%
+ 
  validated : (2/ 6) × 100 = 33%
+ 
  monitored : (3/ 6) × 100 = 50%
 - Untested Risks Percent:
+  
   Open : (1 / 6) × 100 = 17%
 
 
-   Risk Coverage Pie Chart
+   PIE CHART
 
-Validated      ████████░░░░░░░░░░░░░░░░░░ 33%
-Monitored (Low Impact)  █████████████████░░░░░░░░░ 50%
-Needs Fix        ██████░░░░░░░░░░░░░░░░░░░ 17%
+Validated 
+     ████████░░░░░░░░░░░░░░░░░░ 33%
+
+Monitored (Low Impact) 
+
+     █████████████████░░░░░░░░░ 50%
+
+Needs Fix   
+     ██████░░░░░░░░░░░░░░░░░░░ 17%
 
 
 ## Test Cases

@@ -65,10 +65,10 @@
 
 | Phase | Planned Duration | Actual Duration | Status |
 |-------|------------------|-----------------|--------|
-| Planning & Risk Identification| 3 Days |1 Day |Completed|
+| Planning & Risk Identification| 3 Days |2 Days |Completed|
 | Test Case Design & Environment Setup| 2 Days | 1 Day|Completed |
-| Test Execution & Defect Logging|2 Days | 1 Day|Completed|
-| Regression, metrics & report submission|2 Days | 2 Days |Completed |
+| Test Execution & Defect Logging|4 Hours | 3 Hours|Completed|
+| Regression, metrics & report submission|10 Hours| 5 Hours |Completed |
 ## Risk Analysis
 
 ### Risks
@@ -118,7 +118,7 @@ Needs Fix
 |TC-03 |Hint system |Verify hint deduction, reduced award and correct behavior when no puzzle is active.|Hint button remains inactive or triggers “Please start a New puzzle” message before a word is displayed|Hint button displays hint meaning with no puzzle shown (confusing)|Fail|R-03 |
 |TC-04 |Reset Function | Verify Reset clears score and “Bonus at” counter|“Score: 0”, “Solved: 0”, “Bonus at: 3” displayed after reset |works correctly |passed |R-04 |
 |TC-05 |Negative Test — Leaderboard Sorting|Validate sorting order and tie handling |Scores displayed in descending order; ties stable | Works correctly | Passed|R-05|
-|TC-06 | LocalStorage Corruption| Test how system handles malformed leaderboard data|On load, the system detects invalid data, clears leaderboard, and continues without crashing| Not executed — requires manual injection of corrupted localStorage entries |Skipped | R-06|
+|TC-06 | LocalStorage Corruption| Test how system handles malformed leaderboard data|On load, the system detects invalid data, clears leaderboard, and continues without crashing| System cleared invalid leaderboard entries and continued normally |Passes | R-06|
 |TC-07 |Usability Test - UI Responsiveness |Ensure layout adapts properly to small screen sizes |UI scales without breaking |Works as expected | passed| - |
 |TC-08 |Negative Test — Invalid Input handling |Enter blank or special characters as guess | Display validation message and do not advance puzzle or award points| works correctly| passed| - |
 
@@ -130,12 +130,15 @@ Needs Fix
 |D-02 | Hint deduction not reflected immediately|medium |R-03 |Open | https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/4|
 |D-03 | Bonus not doubling consistently on 3rd correct answer|Medium |R-02| Closed – Expected Behavior| https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/5|
 |D-04 | Leaderboard  persistance of the top-3 after closing tab| Low | R-01|closed-Works as Expected |https://github.com/PLP-Database-Design/wk-5-ropdenis-dev/issues/6|
+
 ## Metrics
 
-- Test Case Pass Percent: (7/8) × 100 = 88%
-- Defect Density: (4/8) × 100 = 0.50
-- Risk Coverage Percent: (5/6) × 100 = 83%
-- Regression Success Rate: (4/4) × 100 = 100%
+| Metric | Formula | solution  |
+|----|-------------|----------|
+|Test Case Pass Percent | (Passed / Total) × 100| 7/ 8 × 100 = 87% |
+|Defect Density |Defects / Test Cases |(4/8) × 100 = 0.5 |  
+|Risk Coverage Percent |(Tested Risks / Total Risks) × 100 | 5 / 6 × 100 ≈ 83%| 
+|Regression Success Rate | (Passed Regression / Total Regression) × 100| 8 / 8 × 100 = 100%| 
 
 ### Defect Summary
 
@@ -189,6 +192,5 @@ Needs Fix
 ## Overall Summary
 
 **Statement:** 
-All planned tests for Word Puzzle Game Plus have been executed, defects were logged with linked risks, and key features like Bonus, Hint, and Leaderboard were fully verified.
-
+- All planned tests for Word Puzzle Game Plus have been executed, defects were logged with linked risks, and key features like Bonus, Hint, and Leaderboard were fully verified.
 **Test Status:** ☑ Completed / ☐ In Progress / ☐ Deferred
